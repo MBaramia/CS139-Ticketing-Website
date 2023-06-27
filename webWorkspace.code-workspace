@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://ssh-remote+remote-22.dcs.warwick.ac.uk/dcs/22/u2241621/cs139/cw/coursework"
+		}
+	],
+	"remoteAuthority": "ssh-remote+remote-22.dcs.warwick.ac.uk",
+	"settings": {}
+}
