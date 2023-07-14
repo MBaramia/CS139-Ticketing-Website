@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='logs.css') }}">
+  </head>
+  <body>
+    <header>
+  		<h1>WarwickTikits
+  		<nav>
+  			<ul>
+  				<li><a href="{{url_for('index')}}">Home</a></li>
+  				<li><a href="{{url_for('addEvent')}}">Add Events</a></li>
+          <li><a href="{{url_for('login')}}">Login</a></li>
+          <li><a href="{{url_for('register')}}">Register</a></li>
+  				<li><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+  				<li><a href="{{ url_for('logout') }}">Logout</a></li>
+  			</ul>
+  		</nav>
+  		</h1>
+  	</header>
+      <main>
+      <h2>Register</h2>
+      <p>Do you want to create a user or organiser account?</p>
+      <a href="{{ url_for('register_user') }}">User</a>
+      <a href="{{ url_for('register_organiser') }}">Organiser</a>
+    </main>
+		<footer>
+			<p>&copy; 2023 WarwickTikits.</p>
+		</footer>
+  </body>
+</html>

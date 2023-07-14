@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WarwickTikits</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='logs.css')}}">
+</head>
+<body>
+	<header>
+		<h1>WarwickTikits
+		<nav>
+			<ul>
+				<li><a href="{{url_for('index')}}">Home</a></li>
+				<li><a href="{{url_for('addEvent')}}">Add Events</a></li>
+        		<li><a href="{{url_for('login')}}">Login</a></li>
+        		<li><a href="{{url_for('register')}}">Register</a></li>
+				<li><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+				<li><a href="{{ url_for('logout') }}">Logout</a></li>
+			</ul>
+		</nav>
+		</h1>
+	</header>
+  <main>
+  <h2>Here are all the events!</h2>
+  <ul>
+    {% for events in events %}
+      <li>
+        <h2>{{ events.name }}</h2>
+        <p>{{ events.date }}</p>
+        <p>{{ events.place }}</p>
+        <p>cost: {{ events.cost }}$</p>
+      </li>
+    {% endfor %}
+  </ul>
+  </main>
+	<footer>
+		<p>&copy; 2023 WarwickTikits.</p>
+	</footer>
+  </body>
+  </html>

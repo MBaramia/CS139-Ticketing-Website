@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cancel Event</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='logs.css')}}">
+</head>
+<body>
+  <header>
+    <h1>WarwickTikits
+    <nav>
+      <ul>
+        <li><a href="{{url_for('index')}}">Home</a></li>
+        <li><a href="{{url_for('addEvent')}}">Add Events</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+        <li><a href="{{url_for('register')}}">Register</a></li>
+        <li><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+      </ul>
+    </nav>
+    </h1>
+  </header>
+<main>
+    {% if error_message %}
+      <div class="error-message">{{ error_message }}</div>
+    {% endif %}
+  	<h1>Cancel Events Here!</h1>
+  	<form action="{{ url_for('cancel_event') }}" method="post">
+  		<label for="event_id">Event ID:</label>
+  		<input type="text" id="event_id" name="event_id">
+  		<br><br>
+  		<input type="submit" value="Cancel Event">
+	   </form>
+</main>
+  <footer>
+    <p>&copy; 2023 WarwickTikits</p>
+  </footer>
+</body>
+</html>

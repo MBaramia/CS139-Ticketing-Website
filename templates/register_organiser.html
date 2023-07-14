@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='logs.css')}}">
+</head>
+<body>
+	<header>
+		<h1>WarwickTikits
+		<nav>
+			<ul>
+				<li><a href="{{url_for('index')}}">Home</a></li>
+				<li><a href="{{url_for('addEvent')}}">Add Events</a></li>
+        		<li><a href="{{url_for('login')}}">Login</a></li>
+        		<li><a href="{{url_for('register')}}">Register</a></li>
+				<li><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+				<li><a href="{{ url_for('logout') }}">Logout</a></li>
+			</ul>
+		</nav>
+		</h1>
+	</header>
+	<main>
+		<h2>Register to be An Organiser Now!</h2>
+		{% if error_message %}
+      		<div class="error-message">{{ error_message }}</div>
+    	{% endif %}
+		<form action="/register/organiser" method="post">
+			<label for="name">Username:</label>
+			<input type="name" name="name" id="name" required>
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required>
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" required>
+			<label for="confirm_password">Confirm Password:</label>
+			<input type="password" name="confirm_password" id="confirm_password" required>
+      		<label for="code">Enter Code:</label>
+      		<input type="code" name="code" id="code" required>
+			<button type="submit">Register</button>
+		</form>
+		<p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+	</main>
+	<footer>
+		<p>&copy; 2023 WarwickTikits.</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WarwickTikits</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='logs.css')}}">
+</head>
+<body>
+	<header>
+		<h1>WarwickTikits
+		<nav>
+			<ul>
+				<li><a href="{{url_for('index')}}">Home</a></li>
+				<li><a href="{{url_for('addEvent')}}">Add Events</a></li>
+        		<li><a href="{{url_for('login')}}">Login</a></li>
+        		<li><a href="{{url_for('register')}}">Register</a></li>
+				<li><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+				<li><a href="{{ url_for('logout') }}">Logout</a></li>
+			</ul>
+		</nav>
+		</h1>
+	</header>
+	<main>
+		<h2>Welcome to WarwickTikits</h2>
+		<a href="{{url_for('event_list')}}">View Upcoming Events!</a>
+		<a href="{{url_for('purchase_ticket')}}">Buy Tickets Now!</a>
+		<p>Here you can purchase tickets for all the upcoming events and shows at Warwick and Beyond!</p>
+		<a href="{{url_for('cancel_event')}}">Cancel Events</a>
+	</main>
+	<footer>
+		<p>&copy; 2023 WarwickTikits</p>
+	</footer>
+</body>
+</html>

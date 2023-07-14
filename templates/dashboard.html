@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WarwickTikits</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename ='logs.css')}}">
+  </head>
+  <body>
+    <header>
+  		<h1>WarwickTikits
+  		<nav>
+  			<ul>
+  				<li><a href="{{url_for('index')}}">Home</a></li>
+  				<li><a href="{{url_for('addEvent')}}">Add Events</a></li>
+          <li><a href="{{url_for('login')}}">Login</a></li>
+          <li><a href="{{url_for('register')}}">Register</a></li>
+  				<li><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+  				<li><a href="{{ url_for('logout') }}">Logout</a></li>
+  			</ul>
+  		</nav>
+  		</h1>
+  	</header>
+    <main>
+    <h1>Dashboard</h1>
+    <h2>Here are your Events!</h2>
+    {% if ticket %}
+      <ul>
+        {% for ticket in ticket %}
+          <li>
+            <p>This is ticket  {{ ticket.id }} for Event {{ticket.event_id}} - Barcode: {{ ticket.barcode }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>You have not got any tickets yet.</p>
+    {% endif %}
+    <a href="{{url_for('cancel_ticket')}}">Cancel Tickets Here!</a>
+  </main>
+  <footer>
+		<p>&copy; 2023 WarwickTikits.</p>
+	</footer>
+  </body>
+</html>

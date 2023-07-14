@@ -1,0 +1,122 @@
+
+header {
+	background-color: #66c92d;
+	color: #ffffff;
+	padding: 25px;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  padding: 10px 10px 10px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #66c92d;
+  color: #ffffff;
+  }
+  main {
+    text-align: center;
+    padding-top: 12px;
+    margin: 20px;
+  }
+
+  p {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+   
+   }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ebe6ec;
+    margin: 0;
+    padding: 0;
+  }
+
+header h1 {
+	margin: 0;
+	font-size: 38px;
+}
+
+nav {
+	float: right;
+	margin: 0;
+	padding: 0px;
+	font-size: 22px
+}
+
+nav ul {
+	margin: 0;
+	padding: 12px;
+
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 18px;
+}
+
+
+nav a {
+	color: #ffffff;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+
+h2{
+  text-align: center;
+  margin-top: 45px;
+}
+form {
+  background-color: #ece2e2;
+  padding: 30px;
+  padding-right: 50px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+label {
+	text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="name"],
+input[type="code"],
+input[type="date"],
+input[type="number"],
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 18px;
+  width: 100%;
+  border: 1px solid #f8f0f0;
+}
+
+button[type="submit"] {
+  text-align: center;
+	color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #276304;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  text-align: center;
+  background-color: #3e828e;
+}
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
